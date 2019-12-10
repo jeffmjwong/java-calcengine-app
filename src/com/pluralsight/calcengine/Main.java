@@ -18,17 +18,18 @@ public class Main {
     }
 
     private static double calculate(double leftVal, double rightVal, char opCode) {
-        if (opCode == 'a') {
-            return leftVal + rightVal;
-        } else if (opCode == 's') {
-            return leftVal - rightVal;
-        } else if (opCode == 'd') {
-            return rightVal == 0.0d ? 0.0d : leftVal / rightVal;
-        } else if (opCode == 'm') {
-            return leftVal * rightVal;
-        } else {
-            System.out.println("Error - invalid opCode!");
-            return 0.0d;
+        switch (opCode) {
+            case 'a':
+                return leftVal + rightVal;
+            case 's':
+                return leftVal - rightVal;
+            case 'd':
+                return rightVal == 0.0d ? 0.0d : leftVal / rightVal;
+            case 'm':
+                return leftVal * rightVal;
+            default:
+                System.out.println("Error - invalid opCode!");
+                return 0.0d;
         }
     }
 }
