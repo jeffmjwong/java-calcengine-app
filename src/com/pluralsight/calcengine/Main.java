@@ -12,10 +12,9 @@ public class Main {
             results[i] = calculate(leftValues[i], rightValues[i], opCodes[i]);
         }
 
-        System.out.println(results[0]);
-        System.out.println(results[1]);
-        System.out.println(results[2]);
-        System.out.println(results[3]);
+        for (double i : results) {
+            System.out.println(i);
+        }
     }
 
     private static double calculate(double leftVal, double rightVal, char opCode) {
