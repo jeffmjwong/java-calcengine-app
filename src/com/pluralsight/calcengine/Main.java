@@ -3,22 +3,30 @@ package com.pluralsight.calcengine;
 public class Main {
 
     public static void main(String[] args) {
-        double val1 = 100.0d;
-        double val2 = 25.0d;
-        char opCode = 'm';
+        double[] leftValues = { 100.0d, 25.0d, 225.0d, 11.0d };
+        double[] rightValues = { 50.0d, 92.0d, 17.0d, 3.0d };
+        char[] opCodes = { 'd', 'a', 's', 'm' };
+        double[] results = new double[opCodes.length];
 
-        System.out.println(calculate(val1, val2, opCode));
+        for (int i = 0; i < opCodes.length; i++) {
+            results[i] = calculate(leftValues[i], rightValues[i], opCodes[i]);
+        }
+
+        System.out.println(results[0]);
+        System.out.println(results[1]);
+        System.out.println(results[2]);
+        System.out.println(results[3]);
     }
 
-    private static double calculate(double val1, double val2, char opCode) {
+    private static double calculate(double leftVal, double rightVal, char opCode) {
         if (opCode == 'a') {
-            return val1 + val2;
+            return leftVal + rightVal;
         } else if (opCode == 's') {
-            return val1 - val2;
+            return leftVal - rightVal;
         } else if (opCode == 'd') {
-            return val2 == 0.0d ? 0.0d : val1 / val2;
+            return rightVal == 0.0d ? 0.0d : leftVal / rightVal;
         } else if (opCode == 'm') {
-            return val1 * val2;
+            return leftVal * rightVal;
         } else {
             System.out.println("Error - invalid opCode!");
             return 0.0d;
