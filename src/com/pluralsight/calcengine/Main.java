@@ -11,11 +11,16 @@ public class Main {
 
         for (MathEquation equation : equations) {
             equation.execute();
-            System.out.println(equation.result);
+            System.out.println(equation.getResult());
         }
     }
 
     private static MathEquation create(double leftVal, double rightVal, char opCode) {
-        return new MathEquation(leftVal, rightVal, opCode);
+        MathEquation equation = new MathEquation();
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
+
+        return equation;
     }
 }
