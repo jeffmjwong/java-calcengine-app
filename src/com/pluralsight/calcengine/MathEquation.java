@@ -9,15 +9,11 @@ public class MathEquation {
     public double getLeftVal() {
         return this.leftVal;
     }
-
     public void setLeftVal(double leftVal) {
         this.leftVal = leftVal;
     }
 
-    public double getRightVal() {
-        return this.rightVal;
-    }
-
+    public double getRightVal() { return this.rightVal;}
     public void setRightVal(double rightVal) {
         this.rightVal = rightVal;
     }
@@ -25,13 +21,24 @@ public class MathEquation {
     public char getOpCode() {
         return this.opCode;
     }
-
     public void setOpCode(char opCode) {
         this.opCode = opCode;
     }
 
     public double getResult() {
         return this.result;
+    }
+
+    public MathEquation() {}
+
+    public MathEquation(char opCode) {
+        this.opCode = opCode;
+    }
+
+    public MathEquation(char opCode, double leftVal, double rightVal) {
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
     }
 
     public void execute() {
