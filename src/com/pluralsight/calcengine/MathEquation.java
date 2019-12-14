@@ -67,4 +67,11 @@ public class MathEquation {
         this.rightVal = rightVal;
         this.execute();
     }
+
+    public void execute(int leftVal, int rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+        this.execute();
+        this.result = (int)this.result;
+    }
 }

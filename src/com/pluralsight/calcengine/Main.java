@@ -30,5 +30,8 @@ public class Main {
 
         equationOverload.execute(leftInt, rightInt);
         System.out.println(equationOverload.getResult());
+
+        equationOverload.execute((double)leftInt, rightInt);
+        System.out.println(equationOverload.getResult());
     }
 }
