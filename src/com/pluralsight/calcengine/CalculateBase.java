@@ -12,6 +12,7 @@ public abstract class CalculateBase {
     public double getRightVal() { return this.rightVal;}
     public void setRightVal(double rightVal) { this.rightVal = rightVal; }
     public double getResult() { return this.result; }
+    public void setResult(double result) { this.result = result; };
 
     public CalculateBase() {}
 
