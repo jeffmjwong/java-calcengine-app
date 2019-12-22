@@ -6,6 +6,13 @@ public class Main {
 //        useMathEquation();
 //        useOverloads();
 //        useCalculatorBaseInheritance();
+
+        String[] statements = {
+                "divide 100.0 50.0", // 100.0 / 50.0 = 2.0
+                "add 25.0 92.0", // 25.0 + 92.0 = 117.0
+                "subtract 225.0 17.0", // 225.0 - 17.0 = 208.0
+                "multiply 11.0 3.0" // 11.0 * 3.0 = 33.0
+        };
     }
 
     static void useMathEquation() {
