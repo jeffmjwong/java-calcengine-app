@@ -3,6 +3,12 @@ package com.pluralsight.calcengine;
 public class Main {
 
     public static void main(String[] args) {
+//        useMathEquation();
+//        useOverloads();
+//        useCalculatorBaseInheritance();
+    }
+
+    static void useMathEquation() {
         MathEquation[] equations = new MathEquation[4];
         equations[0] = new MathEquation('d', 100.0d, 50.0d);
         equations[1] = new MathEquation('a', 25.0d, 92.0d);
@@ -13,11 +19,9 @@ public class Main {
             equation.execute();
             System.out.println(equation.getResult());
         }
+    }
 
-        System.out.println();
-        System.out.println("Using Overloads");
-        System.out.println();
-
+    static void useOverloads() {
         double leftDouble = 9.0d;
         double rightDouble = 4.0d;
         int leftInt = 9;
@@ -33,11 +37,9 @@ public class Main {
 
         equationOverload.execute((double)leftInt, rightInt);
         System.out.println(equationOverload.getResult());
+    }
 
-        System.out.println();
-        System.out.println("Using Inheritance");
-        System.out.println();
-
+    static void useCalculatorBaseInheritance() {
         CalculateBase[] calculators = {
                 new Divider(100.0d, 50.0d),
                 new Adder(25.0d, 92.0d),
