@@ -13,6 +13,13 @@ public class Main {
                 "subtract 225.0 17.0", // 225.0 - 17.0 = 208.0
                 "multiply 11.0 3.0" // 11.0 * 3.0 = 33.0
         };
+
+        CalculateHelper helper = new CalculateHelper();
+
+        for (String statement : statements) {
+            helper.process(statement);
+            System.out.println(helper.result);
+        }
     }
 
     static void useMathEquation() {
