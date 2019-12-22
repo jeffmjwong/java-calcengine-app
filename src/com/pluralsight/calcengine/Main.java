@@ -18,7 +18,7 @@ public class Main {
 
         for (String statement : statements) {
             helper.process(statement);
-            System.out.println(helper.result);
+            System.out.println(helper);
         }
     }
 
