@@ -4,8 +4,10 @@ import com.pluralsight.calcengine.Adder;
 import com.pluralsight.calcengine.CalculateBase;
 import com.pluralsight.calcengine.CalculateHelper;
 import com.pluralsight.calcengine.Divider;
+import com.pluralsight.calcengine.DynamicHelper;
 import com.pluralsight.calcengine.InvalidStatementException;
 import com.pluralsight.calcengine.MathEquation;
+import com.pluralsight.calcengine.MathProcessing;
 import com.pluralsight.calcengine.Multiplier;
 import com.pluralsight.calcengine.Subtracter;
 
@@ -21,8 +23,14 @@ public class Main {
                 "add 25.0 92.0", // 25.0 + 92.0 = 117.0
         };
 
-        for (String statement : statements) {
+        MathProcessing[] handlers = {
+                new Adder()
+        };
 
+        DynamicHelper helper = new DynamicHelper(handlers);
+
+        for (String statement : statements) {
+            System.out.println(helper.process(statement));
         }
     }
 
