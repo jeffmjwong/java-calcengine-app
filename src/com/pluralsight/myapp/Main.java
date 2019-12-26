@@ -15,7 +15,10 @@ public class Main {
 //        useMathEquation();
 //        useOverloads();
 //        useCalculatorBaseInheritance();
+        useCalculateHelper();
+    }
 
+    static void useCalculateHelper() {
         String[] statements = {
                 "add 1.0", // Error: incorrect number of values
                 "add xx 25.0", // Error: non-numeric data
