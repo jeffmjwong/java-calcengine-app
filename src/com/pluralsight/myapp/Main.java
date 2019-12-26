@@ -15,7 +15,15 @@ public class Main {
 //        useMathEquation();
 //        useOverloads();
 //        useCalculatorBaseInheritance();
-        useCalculateHelper();
+//        useCalculateHelper();
+
+        String[] statements = {
+                "add 25.0 92.0", // 25.0 + 92.0 = 117.0
+        };
+
+        for (String statement : statements) {
+
+        }
     }
 
     static void useCalculateHelper() {
